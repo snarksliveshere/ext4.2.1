@@ -1,4 +1,4 @@
-Ext.define('NewApp.view.Main', {
+Ext.define('HR.view.Main', {
     extend: 'Ext.container.Container',
     requires:[
         'Ext.tab.Panel',

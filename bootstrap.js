@@ -8,7 +8,7 @@ Ext.Loader.addClassPathMappings({
   "Ext": "ext/src",
   "Ext.Msg": "ext/src/window/MessageBox.js",
   "Ext.rtl.EventObjectImpl": "ext/src/rtl/EventObject.js",
-  "NewApp": "app"
+  "HR": "app"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "Ext.AbstractComponent": [],
@@ -827,10 +827,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.window.Window": [
     "Ext.Window"
   ],
-  "NewApp.Application": [],
-  "NewApp.controller.Main": [],
-  "NewApp.view.Main": [],
-  "NewApp.view.Viewport": []
+  "HR.Application": [],
+  "HR.controller.Main": [],
+  "HR.view.Main": [],
+  "HR.view.Viewport": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1817,12 +1817,12 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.window.Window": [
     "widget.window"
   ],
-  "NewApp.Application": [],
-  "NewApp.controller.Main": [],
-  "NewApp.view.Main": [
+  "HR.Application": [],
+  "HR.controller.Main": [],
+  "HR.view.Main": [
     "widget.app-main"
   ],
-  "NewApp.view.Viewport": []
+  "HR.view.Viewport": []
 });
 Ext.setVersion("ext-theme-base", "4.2.1");
 Ext.setVersion("ext-theme-classic", "4.2.1");

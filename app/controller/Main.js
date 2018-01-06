@@ -1,3 +1,3 @@
-Ext.define('NewApp.controller.Main', {
+Ext.define('HR.controller.Main', {
     extend: 'Ext.app.Controller'
 });

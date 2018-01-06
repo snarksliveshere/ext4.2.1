@@ -5,9 +5,9 @@
 */
 
 Ext.application({
-    name: 'NewApp',
+    name: 'HR',
 
-    extend: 'NewApp.Application',
+    extend: 'HR.Application',
     
     autoCreateViewport: true
 });

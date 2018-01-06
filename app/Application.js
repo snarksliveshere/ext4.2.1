@@ -1,5 +1,5 @@
-Ext.define('NewApp.Application', {
-    name: 'NewApp',
+Ext.define('HR.Application', {
+    name: 'HR',
 
     extend: 'Ext.app.Application',
 
@@ -12,6 +12,24 @@ Ext.define('NewApp.Application', {
     ],
 
     stores: [
-        // TODO: add stores here
-    ]
+        'Companies'
+    ],
+    models: ['Company'],
+    requires: ['Ext.window.*'],
+    launch: function(){
+        var farata = Ext.create('HR.model.Company',{
+            name: 'Farata Systems',
+            email: 'info@faratalalala.com'
+        });
+        var sencha = this.getCompanyModel().create({
+            name: 'Sencha',
+            email: 'info@thesencha.com'
+        });
+        Ext.Msg.alert('company: ' + sencha.get('name'));
+        var companies = this.getCompaniesStore();
+        companies.each(function(company){
+            console.log('Company ' + company.get('name'));
+        });
+
+    }
 });

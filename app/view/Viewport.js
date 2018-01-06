@@ -1,8 +1,8 @@
-Ext.define('NewApp.view.Viewport', {
+Ext.define('HR.view.Viewport', {
     extend: 'Ext.container.Viewport',
     requires:[
         'Ext.layout.container.Fit',
-        'NewApp.view.Main'
+        'HR.view.Main'
     ],
 
     layout: {
