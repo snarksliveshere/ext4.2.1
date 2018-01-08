@@ -1,15 +1,26 @@
 Ext.define('HR.view.Viewport', {
     extend: 'Ext.container.Viewport',
-    requires:[
-        'Ext.layout.container.Fit',
-        'HR.view.Main'
+    requires: [
+        'Ext.resizer.Splitter',
+        'Ext.layout.container.VBox',
+        'HR.view.company.List'
     ],
 
     layout: {
-        type: 'fit'
+        type: 'vbox',
+        align: 'stretch'
     },
 
-    items: [{
-        xtype: 'app-main'
+    items: [
+    {
+        xtype: 'companylist',
+        title: 'Company list',
+        flex: 1
+    }, {
+        xtype: 'splitter'
+    }, {
+        xtype: 'panel',
+        title: 'Associate list',
+        flex: 1
     }]
 });

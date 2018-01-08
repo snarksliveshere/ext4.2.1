@@ -1,7 +1,8 @@
 Ext.define('HR.Application', {
-    name: 'HR',
-
     extend: 'Ext.app.Application',
+    requires: 'Ext.window.*',
+
+    name: 'HR',
 
     views: [
         // TODO: add views here
@@ -14,22 +15,29 @@ Ext.define('HR.Application', {
     stores: [
         'Companies'
     ],
-    models: ['Company'],
-    requires: ['Ext.window.*'],
-    launch: function(){
-        var farata = Ext.create('HR.model.Company',{
+
+    models: [
+        'Company'
+    ],
+
+    launch: function () {
+        var farata = Ext.create('HR.model.Company', {
             name: 'Farata Systems',
-            email: 'info@faratalalala.com'
-        });
-        var sencha = this.getCompanyModel().create({
-            name: 'Sencha',
-            email: 'info@thesencha.com'
-        });
-        Ext.Msg.alert('company: ' + sencha.get('name'));
-        var companies = this.getCompaniesStore();
-        companies.each(function(company){
-            console.log('Company ' + company.get('name'));
+            email: 'info@faratasystems.com'
         });
 
+        var sencha = this.getCompanyModel().create({
+            name: 'Sencha',
+            email: 'info@sencha.com'
+        });
+
+        Ext.Msg.alert('Company: ' + farata.get('name'));
+        console.log('Company: ' + sencha.get('name'));
+
+        var companies = this.getCompaniesStore();
+        companies.each(function (company) {
+            console.log('Company: ' + company.get('name'));
+        });
     }
+
 });
